@@ -46,6 +46,11 @@ const scriptList = [
     codeSnippet: 'loadstring(game:HttpGet(("https://raw.githubuserco...',
     fullCode: 'This is the full code for SPEEDWAVE Ralis'
   },
+  {
+    name: "zenox | Airflow FIXED",
+    codeSnippet: 'loadstring(game:HttpGet("https://api.luarmor.net/f...',
+    fullCode: 'This is the full code for zenox | Airflow FIXED'
+  },
 ];
 
 const ScriptItem = ({ name, codeSnippet, fullCode }: { name: string; codeSnippet: string; fullCode: string }) => {
@@ -118,5 +123,6 @@ export default function Home() {
     </>
   );
 }
+
 
 
