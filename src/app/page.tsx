@@ -31,6 +31,11 @@ const scriptList = [
     codeSnippet: 'loadstring(game:HttpGet("https://api.luarmor.net/f...',
     fullCode: 'This is the full code for Best script op'
   },
+    {
+    name: "Dead Rails Script SpeedHubX - Auto Bond, Auto Finish Game, ESP",
+    codeSnippet: 'loadstring(game:HttpGet("https://raw.githubusercon...',
+    fullCode: 'This is the full code for Dead Rails Script SpeedHubX - Auto Bond, Auto Finish Game, ESP'
+  },
 ];
 
 const ScriptItem = ({ name, codeSnippet, fullCode }: { name: string; codeSnippet: string; fullCode: string }) => {
