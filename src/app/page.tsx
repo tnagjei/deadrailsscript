@@ -17,6 +17,14 @@ export default function Home() {
       </header>
       <main>
         <Hero />
+        <section className="py-6 bg-background">
+          <div className="container mx-auto text-center">
+            <p className="text-lg text-muted-foreground">
+              Explore a vast collection of DeadRails scripts to enhance your game development.
+              Find inspiration, save time, and bring your game ideas to life with our curated script hub.
+            </p>
+          </div>
+        </section>
         <Features />
         <HowItWorks />
         <AiSuggestion />
@@ -25,4 +33,3 @@ export default function Home() {
     </>
   );
 }
-
