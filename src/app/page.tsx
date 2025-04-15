@@ -111,6 +111,76 @@ const scriptList = [
     "codeSnippet": "loadstring(game:HttpGet('https://raw.githubusercontent.com/Bebo1337/Roblox/main/Zeus.lua'))()",
     "fullCode": "This is the full code for Zeus"
   },
+  {
+    "name": "Oxygen U",
+    "codeSnippet": "loadstring(game:HttpGet('https://raw.githubusercontent.com/xquinn0/RobloxScripts/main/Oxygen%20U.lua'))()",
+    "fullCode": "This is the full code for Oxygen U"
+  },
+  {
+    "name": "Vega X",
+    "codeSnippet": "loadstring(game:HttpGet('https://raw.githubusercontent.com/xquinn0/RobloxScripts/main/Vega%20X.lua'))()",
+    "fullCode": "This is the full code for Vega X"
+  },
+  {
+    "name": "Electron",
+    "codeSnippet": "loadstring(game:HttpGet('https://raw.githubusercontent.com/xquinn0/RobloxScripts/main/Electron.lua'))()",
+    "fullCode": "This is the full code for Electron"
+  },
+  {
+    "name": "CodeX",
+    "codeSnippet": "loadstring(game:HttpGet('https://raw.githubusercontent.com/xquinn0/RobloxScripts/main/CodeX.lua'))()",
+    "fullCode": "This is the full code for CodeX"
+  },
+  {
+    "name": "Calamity",
+    "codeSnippet": "loadstring(game:HttpGet('https://raw.githubusercontent.com/xquinn0/RobloxScripts/main/Calamity.lua'))()",
+    "fullCode": "This is the full code for Calamity"
+  },
+  {
+    "name": "Celestial",
+    "codeSnippet": "loadstring(game:HttpGet('https://raw.githubusercontent.com/xquinn0/RobloxScripts/main/Celestial.lua'))()",
+    "fullCode": "This is the full code for Celestial"
+  },
+  {
+    "name": "Comet",
+    "codeSnippet": "loadstring(game:HttpGet('https://raw.githubusercontent.com/xquinn0/RobloxScripts/main/Comet.lua'))()",
+    "fullCode": "This is the full code for Comet"
+  },
+  {
+    "name": "Astral",
+    "codeSnippet": "loadstring(game:HttpGet('https://raw.githubusercontent.com/xquinn0/RobloxScripts/main/Astral.lua'))()",
+    "fullCode": "This is the full code for Astral"
+  },
+  {
+    "name": "Noclip Script",
+    "codeSnippet": "local lp = game.Players.LocalPlayer\nlocal char = lp.Character or lp.CharacterAdded:Wait()\nlocal hum = char:FindFirstChild(\"Humanoid\")\nlocal root = char:FindFirstChild(\"HumanoidRootPart\")",
+    "fullCode": "-- Variables\nlocal player = game:GetService(\"Players\").LocalPlayer\nlocal character = player.Character or player.CharacterAdded:Wait()\nlocal humanoid = character:WaitForChild(\"Humanoid\")\nlocal rootPart = character:WaitForChild(\"HumanoidRootPart\")\n\n-- Noclip Function\nfunction toggleNoclip(enabled)\n    for _, part in ipairs(character:GetDescendants()) do\n        if part:IsA(\"BasePart\") and part.CanCollide then\n            part.CanCollide = not enabled\n        end\n    end\nend\n\n-- Keybind\nlocal userInputService = game:GetService(\"UserInputService\")\nlocal noclipEnabled = false\n\nuserInputService.InputBegan:Connect(function(input, gameProcessedEvent)\n    if gameProcessedEvent then return end\n    if input.KeyCode == Enum.KeyCode.N then -- Change 'N' to your desired key\n        noclipEnabled = not noclipEnabled\n        toggleNoclip(noclipEnabled)\n        print(\"Noclip \" .. (noclipEnabled and \"Enabled\" or \"Disabled\"))\n    end\nend)"
+  },
+  {
+    "name": "Speed Script",
+    "codeSnippet": "local speed = 50 -- Speed\n\nlocal player = game.Players.LocalPlayer\nlocal character = player.Character or player.CharacterAdded:Wait()\nlocal humanoid = character:WaitForChild(\"Humanoid\")",
+    "fullCode": "-- Variables\nlocal speed = 50 -- Speed\n\nlocal player = game.Players.LocalPlayer\nlocal character = player.Character or player.CharacterAdded:Wait()\nlocal humanoid = character:WaitForChild(\"Humanoid\")\n\nhumanoid.WalkSpeed = speed"
+  },
+  {
+    "name": "JUMP SCRIPT",
+    "codeSnippet": "local height = 100 -- Jump Height\n\nlocal player = game.Players.LocalPlayer\nlocal character = player.Character or player.CharacterAdded:Wait()\nlocal humanoid = character:WaitForChild(\"Humanoid\")",
+    "fullCode": "-- Variables\nlocal height = 100 -- Jump Height\n\nlocal player = game.Players.LocalPlayer\nlocal character = player.Character or player.CharacterAdded:Wait()\nlocal humanoid = character:WaitForChild(\"Humanoid\")\n\nhumanoid.JumpPower = height"
+  },
+  {
+    "name": "Fly Script",
+    "codeSnippet": "local UIS = game:GetService(\"UserInputService\")\nlocal player = game:GetService(\"Players\").LocalPlayer\nlocal character = player.Character or player.CharacterAdded:Wait()\nlocal hum = character:WaitForChild(\"Humanoid\")",
+    "fullCode": "local UIS = game:GetService(\"UserInputService\")\nlocal player = game:GetService(\"Players\").LocalPlayer\nlocal character = player.Character or player.CharacterAdded:Wait()\nlocal hum = character:WaitForChild(\"Humanoid\")\nlocal camera = workspace.CurrentCamera\n\nlocal flying = false\nlocal speed = 50\n\nUIS.InputBegan:Connect(function(input, gameProcessedEvent)\n    if input.KeyCode == Enum.KeyCode.F then\n        flying = not flying\n        if flying then\n            hum.JumpPower = 0\n            hum.WalkSpeed = 0\n        else\n            hum.JumpPower = 50\n            hum.WalkSpeed = 16\n        end\n    end\nend)\n\ngame:GetService(\"RunService\").RenderStepped:Connect(function(dt)\n    if flying then\n        character:SetPrimaryPartCFrame(character:GetPrimaryPartCFrame() * CFrame.new(camera.CFrame.LookVector.X*speed*dt,0,camera.CFrame.LookVector.Z*speed*dt))\n    end\nend)"
+  },
+  {
+    "name": "Infinite Jump Script",
+    "codeSnippet": "local uis = game:GetService(\"UserInputService\")\nlocal player = game:GetService(\"Players\").LocalPlayer\nlocal character = player.Character or player.CharacterAdded:Wait()\nlocal humanoid = character:WaitForChild(\"Humanoid\")",
+    "fullCode": "local uis = game:GetService(\"UserInputService\")\nlocal player = game:GetService(\"Players\").LocalPlayer\nlocal character = player.Character or player.CharacterAdded:Wait()\nlocal humanoid = character:WaitForChild(\"Humanoid\")\n\nuis.JumpRequest:connect(function()\n   humanoid:ChangeState(15)\nend)"
+  },
+  {
+    "name": "ESP Script",
+    "codeSnippet": "local espColor = Color3.new(1, 0, 0) -- Color\n\nlocal Players = game:GetService(\"Players\")\nlocal LocalPlayer = Players.LocalPlayer",
+    "fullCode": "-- Variables\nlocal espColor = Color3.new(1, 0, 0) -- Color\n\nlocal Players = game:GetService(\"Players\")\nlocal LocalPlayer = Players.LocalPlayer\n\nfunction createEsp(character)\n    local head = character:FindFirstChild(\"Head\")\n    if head then\n        local box = Drawing.new(\"Square\")\n        box.Parent = drawingVisual\n        box.Thickness = 1\n        box.Color = espColor\n        box.Visible = true\n\n        local function updateEsp()\n            if not character or not head or not head.Parent then\n                box:Remove()\n                return\n            end\n\n            local pos, isVisible = camera:WorldToViewportPoint(head.Position)\n            if isVisible then\n                local size = 20 -- Size of the ESP box\n                box.Size = Vector2.new(size, size)\n                box.Position = Vector2.new(pos.X - size / 2, pos.Y - size / 2)\n                box.ZIndex = 7\n            else\n                box.Visible = false\n            end\n        end\n\n        game:GetService(\"RunService\").RenderStepped:Connect(updateEsp)\n    end\nend\n\nPlayers.PlayerAdded:Connect(function(player)\n    player.CharacterAdded:Connect(function(character)\n        if player ~= LocalPlayer then\n            createEsp(character)\n        end\n    end)\nend)\n\nfor _, player in ipairs(Players:GetPlayers()) do\n    if player ~= LocalPlayer and player.Character then\n        createEsp(player.Character)\n    end\nend"
+  }
 ];
 
 const ScriptItem = ({ name, codeSnippet, fullCode }: { name: string; codeSnippet: string; fullCode: string }) => {
@@ -177,8 +247,50 @@ export default function Home() {
                 {/* Add some text here if needed */}
               </p>
             </div>
+             <section className="py-6 bg-background">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="flex flex-col items-center p-4 rounded-lg bg-card shadow-md">
+             <h3 className="text-xl font-semibold mb-2">
+             Reliable Executor
+             </h3>
+             <p className="text-muted-foreground text-center">
+             Windows users: Download an Android emulator like BlueStacks, then run Delta Executor below.
+             </p>
+           </div>
+            <div className="flex flex-col items-center p-4 rounded-lg bg-card shadow-md">
+             <h3 className="text-xl font-semibold mb-2">
+             Windows users
+             </h3>
+             <p className="text-muted-foreground text-center">
+             For optimal performance, we recommend using Delta Executor directly on your device. Get it here (download link).
+             </p>
+           </div>
+            <div className="flex flex-col items-center p-4 rounded-lg bg-card shadow-md">
+             <h3 className="text-xl font-semibold mb-2">
+             Android users
+             </h3>
+             <p className="text-muted-foreground text-center">
+             Native support for Delta Executor is currently in development. If it has some adventure in it, so please wait for the support from delta executor.
+             </p>
+           </div>
+            <div className="flex flex-col items-center p-4 rounded-lg bg-card shadow-md">
+             <h3 className="text-xl font-semibold mb-2">
+             iOS users
+             </h3>
+             <p className="text-muted-foreground text-center">
+             Using scripts violates Roblox Terms of Service and may result in temporary or permanent account bans. We provide these scripts for educational purposes only. Use at your own risk and preferably on alternative accounts.
+             </p>
+           </div>
+        </div>
           </div>
         </section>
+          </div>
+        </section>
+        <ScriptsList />
+        <Features />
+        <HowItWorks />
+        <AiSuggestion />
          <section className="py-6 bg-background">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl font-semibold text-center mb-8 text-foreground">
@@ -276,15 +388,12 @@ export default function Home() {
             <p className="text-muted-foreground">Using scripts violates Roblox Terms of Service and may result in temporary or permanent account bans. We provide these scripts for educational purposes only. Use at your own risk and preferably on alternative accounts.</p>
           </div>
         </section>
-        <ScriptsList />
-        <Features />
-        <HowItWorks />
-        <AiSuggestion />
       </main>
       <Footer />
     </>
   );
 }
+
 
 
 
