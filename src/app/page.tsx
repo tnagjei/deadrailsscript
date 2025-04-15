@@ -41,6 +41,11 @@ const scriptList = [
     codeSnippet: 'loadstring(game:HttpGet("https://raw.githubusercontent...',
     fullCode: 'This is the full code for Tbao Hub'
   },
+  {
+    name: "SPEEDWAVE Ralis",
+    codeSnippet: 'loadstring(game:HttpGet(("https://raw.githubuserco...',
+    fullCode: 'This is the full code for SPEEDWAVE Ralis'
+  },
 ];
 
 const ScriptItem = ({ name, codeSnippet, fullCode }: { name: string; codeSnippet: string; fullCode: string }) => {
@@ -113,4 +118,5 @@ export default function Home() {
     </>
   );
 }
+
 
