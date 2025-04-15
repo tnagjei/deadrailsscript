@@ -51,6 +51,16 @@ const scriptList = [
     codeSnippet: 'loadstring(game:HttpGet("https://api.luarmor.net/f...',
     fullCode: 'This is the full code for zenox | Airflow FIXED'
   },
+  {
+    name: "strelizia script hub",
+    codeSnippet: 'loadstring(game:HttpGet("https://raw.githubusercon...',
+    fullCode: 'This is the full code for strelizia script hub'
+  },
+  {
+    name: "Sypher hub [Need Key]",
+    codeSnippet: 'loadstring(game:HttpGet("https://raw.githubusercon...',
+    fullCode: 'This is the full code for Sypher hub [Need Key]'
+  },
 ];
 
 const ScriptItem = ({ name, codeSnippet, fullCode }: { name: string; codeSnippet: string; fullCode: string }) => {
