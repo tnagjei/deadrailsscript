@@ -36,6 +36,11 @@ const scriptList = [
     codeSnippet: 'loadstring(game:HttpGet("https://raw.githubusercon...',
     fullCode: 'This is the full code for Dead Rails Script SpeedHubX - Auto Bond, Auto Finish Game, ESP'
   },
+  {
+    name: "Tbao Hub",
+    codeSnippet: 'loadstring(game:HttpGet("https://raw.githubusercontent...',
+    fullCode: 'This is the full code for Tbao Hub'
+  },
 ];
 
 const ScriptItem = ({ name, codeSnippet, fullCode }: { name: string; codeSnippet: string; fullCode: string }) => {
@@ -108,3 +113,4 @@ export default function Home() {
     </>
   );
 }
+
