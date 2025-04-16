@@ -137,6 +137,17 @@ const scripts = [
 ];
 
 function App() {
+  React.useEffect(() => {
+    if (window.gtagScriptLoaded) return;
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX'; // 替换为你的 GA ID
+    document.head.appendChild(script);
+    const inlineScript = document.createElement('script');
+    inlineScript.innerHTML = `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-XXXXXXXXXX');`;
+    document.head.appendChild(inlineScript);
+    window.gtagScriptLoaded = true;
+  }, []);
   const [expandedScript, setExpandedScript] = useState<number | null>(null);
   const [currentLang, setCurrentLang] = useState('en');
 
