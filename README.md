@@ -1,1 +1,5 @@
-这一版是用blot重新做的，更多的代码是用trae生成。现阶段用GPT4.1的。trae更适合我的使用习惯
+# Firebase Studio
+
+This is a NextJS starter in Firebase Studio.
+
+To get started, take a look at src/app/page.tsx.
